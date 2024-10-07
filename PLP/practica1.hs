@@ -81,7 +81,7 @@ sumasParciales = foldl (\x y -> if null x then x ++ [y] else x ++ [last x + y]) 
 
 --IV
 sumaAlt :: Num a => [a] -> a
-sumaAlt l = fst . foldr (\ x (y,s) -> (x + (s*y),-s)) (if mod (len l) 2 ==2 then (0,1) else (0,-1)) l
+sumaAlt = fst . foldr (\ x (y,s) -> (x + (s*y),-s)) (0,1)
 
 
 -- [1,2,3,4,5]
